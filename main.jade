@@ -2,4 +2,19 @@ head
     title Let's take the balls
 
 body
-    h1 Start a New Game
+    h1 Start a New Game !
+    +loginButtons
+    br
+    +dashboard
+
+template(name='dashboard')
+    h2  Game Name
+    input.game-name
+    each games
+        +game
+
+template(name='game')
+    hr
+    h2 {{createAt}} 
+    h2 {{username}} create a game : {{gamename}}
+    hr
