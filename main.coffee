@@ -14,6 +14,10 @@ if Meteor.isClient
                     games: ->
                         Dashboard.find({}, {sort: {createAt: -1}})
 
+            @route "gameArea",
+                path :"/game/:gameId"
+                template: "gameArea"
+
     Template.dashboard.events
       "change input.game-name": (e, t) ->
         e.stopPropagation()

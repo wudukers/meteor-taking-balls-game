@@ -23,4 +23,13 @@ template(name='game')
     hr
     h4 {{createAt}} 
     h2 {{username}}  create a game : {{gamename}}
+    a(href = "{{pathFor 'gameArea' gameId=_id}}")
+        h2 Play Game Now
+    hr
+
+template(name='gameArea')
+    hr
+    h2 play game here
+    a(href = "{{pathFor 'index' }}")
+        h4 Go Back to DashBoard
     hr
