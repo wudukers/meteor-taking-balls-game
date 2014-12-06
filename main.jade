@@ -1,7 +1,13 @@
 head
     title Let's take the balls
 
-body
+template(name='layout')
+    h6 Layout: to be filled
+    hr
+    +yield
+    hr
+
+template(name='index')
     h1 Start a New Game !
     +loginButtons
     br
@@ -15,6 +21,6 @@ template(name='dashboard')
 
 template(name='game')
     hr
-    h2 {{createAt}} 
-    h2 {{username}} create a game : {{gamename}}
+    h4 {{createAt}} 
+    h2 {{username}}  create a game : {{gamename}}
     hr

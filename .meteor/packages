@@ -10,4 +10,5 @@ coffeescript
 mquandalle:jade
 accounts-ui
 accounts-facebook
+iron:router
 

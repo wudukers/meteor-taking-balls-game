@@ -1,9 +1,18 @@
 @Dashboard = new Meteor.Collection "dashboard"
+@game = new Meteor.Collection "game"
 
 if Meteor.isClient
-    Template.dashboard.helpers
-        games: ->
-            Dashboard.find({}, {sort: {createAt: -1}})
+    Router.configure
+        layoutTemplate: 'layout'
+
+    Meteor.startup ->
+        Router.map ->
+            @route "index",
+                path: "/"
+                template: "index"
+                data:
+                    games: ->
+                        Dashboard.find({}, {sort: {createAt: -1}})
 
     Template.dashboard.events
       "change input.game-name": (e, t) ->
