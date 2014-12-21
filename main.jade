@@ -1,5 +1,29 @@
 head
-    title Let's take the balls
+	title Let's take the balls
 
 body
-    h1 Start a New Game
+	h1 Start a New Game
+	hr
+	+loginButtons
+	+gameroom
+	hr
+	+inputfor
+
+template(name="inputfor")
+	.container
+		.row
+			.col-md-2
+			.col-md-4
+				input.numer(placeholder="number")
+				input.btn.btn-success(value="click me", type="button")
+
+template(name="gameroom")
+	hr
+	h2 Here is game room
+	hr
+
+	h2
+		| round: {{data.round}}
+		| balls: {{data.balls}}
+		| player1: {{user1}}
+		| player2: {{user2}}

@@ -4,8 +4,11 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 coffeescript
 mquandalle:jade
+accounts-meetup
+accounts-twitter
+accounts-facebook
+accounts-ui
+mizzao:bootstrap-3
 
