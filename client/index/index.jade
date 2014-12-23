@@ -1,0 +1,13 @@
+template(name="index")
+	.container
+		.col-md-2
+		.col-md-8
+			h1 Start a New Game
+			hr
+			+loginButtons
+			hr
+			input.gameroomName
+			input.btn.btn-xs.btn-default(value="create", type="button")
+			each gamerooms
+				h3 {{room_name}} / {{creator}} created
+				a(href="{{pathFor 'gameroom' gameroomId=_id}}") Go to Gameroom

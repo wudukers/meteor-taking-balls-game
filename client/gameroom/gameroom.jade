@@ -1,0 +1,20 @@
+template(name="inputfor")
+	input.numer(type="number", min="1", max="3")
+	input.btn.btn-success(value="click me", type="button")
+
+template(name="gameroom")
+	.container
+		.row
+			.col-md-2
+			.col-md-4
+			h2 Here is game room
+			input.btn.btn-default.register(value="register", type="button")
+			input.btn.btn-default.start(value="start", type="button")
+			hr
+			each game
+				h2 balls: {{balls}}
+				h2 player1: {{player1}}
+				h2 player2: {{player2}}
+			+inputfor
+			hr
+			input.btn.btn-default(value="home page", type="button", onclick="location.href='/'")
