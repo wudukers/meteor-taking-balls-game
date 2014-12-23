@@ -20,9 +20,8 @@ template(name="inputfor")
 template(name="gameroom")
 	hr
 	h2 Here is game room
+	input.btn.btn-default(value="start", type="button")
 	hr
-
-	h2
-		| balls: {{data.balls}}
-		| player1: {{player.profile.name}}
-		| player2: {{player2}}
+	h2 balls: {{data.balls}}
+	h2 player1: {{player1.name}}
+	h2 player2: {{player2.name}}
