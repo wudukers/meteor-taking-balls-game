@@ -8,6 +8,8 @@ template(name="gameroom")
 			.col-md-2
 			.col-md-4
 			h2 Here is game room
+			+trackingInfo
+			hr
 			input.btn.btn-default.register(value="register", type="button")
 			input.btn.btn-default.start(value="start", type="button")
 			hr
@@ -18,3 +20,15 @@ template(name="gameroom")
 			+inputfor
 			hr
 			input.btn.btn-default(value="home page", type="button", onclick="location.href='/'")
+
+
+template(name="trackingInfo")
+	hr
+	if connected
+		h4 connected / {{connectId}}
+	else
+		h2 disconnected
+	hr
+	h2 Tracking Info:
+	ul
+		li uuid: {{uuid}}
